@@ -40,5 +40,5 @@ For a system or platform like an e-commerce store, we need to be able to quickly
 
 Being that said, it is recommended that we implement an even complex system like Hash Tables for an e-commerce platform to ensure a smooth experience to the users.
 
-!(Screenshot.png)
+![Code Execution Screenshot](Screenshot.png)
 
