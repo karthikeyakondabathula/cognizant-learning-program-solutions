@@ -39,3 +39,6 @@ Hence can be used for comparing algorithms to choose the best one for our use ca
 For a system or platform like an e-commerce store, we need to be able to quickly generate the search results for the customers or even access the relevant product in the database to recommend to the customers. Therefore, it is crucial to choose a faster yet reliable searching algorithm. Binary search makes for a good choice, since it shows its performance boost as the number of entities increase, and that is what happens over the time in a platform like this.
 
 Being that said, it is recommended that we implement an even complex system like Hash Tables for an e-commerce platform to ensure a smooth experience to the users.
+
+!(Screenshot.png)
+
