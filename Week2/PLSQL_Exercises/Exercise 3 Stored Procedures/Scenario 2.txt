@@ -1,0 +1,13 @@
+
+-- scenario 2
+
+create or replace procedure UpdateEmployeeBonus(dept in varchar2,bonus_percent in number) as
+begin
+update Employees set Salary=Salary+(Salary*bonus_percent/100) where Department=dept;
+commit;
+end;
+/
+
+exec UpdateEmployeeBonus('IT',10);
+
+select * from Employees;

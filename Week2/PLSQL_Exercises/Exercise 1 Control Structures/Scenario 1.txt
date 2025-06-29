@@ -1,0 +1,13 @@
+-- Scenario 1: Apply Discount for Age > 60
+
+DECLARE
+cursor cur is select CustomerID,Age from Customers;
+BEGIN
+for c in cur loop
+if c.Age>60 then
+update Loans set InterestRate=InterestRate-1 where CustomerID=c.CustomerID;
+end if;
+end loop;
+commit;
+end;
+/

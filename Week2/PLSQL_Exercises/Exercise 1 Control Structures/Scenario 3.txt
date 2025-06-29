@@ -1,0 +1,11 @@
+-- Scenario 3: Reminder for Loans Due in 30 Days
+
+set serveroutput on;
+DECLARE
+cursor cur is select LoanID,CustomerID,DueDate from Loans where DueDate between sysdate and sysdate+30;
+BEGIN
+for c in cur loop
+dbms_output.put_line('Reminder Loan '||c.LoanID||' for Customer '||c.CustomerID||' is due on '||to_char(c.DueDate,'DD-MON-YYYY'));
+end loop;
+end;
+/

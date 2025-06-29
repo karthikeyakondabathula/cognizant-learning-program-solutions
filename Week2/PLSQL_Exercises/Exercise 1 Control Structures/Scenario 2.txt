@@ -1,0 +1,13 @@
+-- Scenario 2: Set VIP if Balance > 10000
+
+DECLARE
+cursor cur is select CustomerID,Balance from Customers;
+BEGIN
+for c in cur loop
+if c.Balance>10000 then
+update Customers set IsVIP='TRUE' where CustomerID=c.CustomerID;
+end if;
+end loop;
+commit;
+end;
+/

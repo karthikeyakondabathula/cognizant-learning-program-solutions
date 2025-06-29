@@ -1,0 +1,12 @@
+-- scenario 1
+
+create or replace procedure ProcessMonthlyInterest as
+begin
+update Accounts set Balance=Balance+(Balance*0.01) where AccountType='Savings';
+commit;
+end;
+/
+
+exec ProcessMonthlyInterest;
+
+select * from Accounts;
